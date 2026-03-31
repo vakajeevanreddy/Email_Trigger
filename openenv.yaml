@@ -1,0 +1,22 @@
+name: email-triage-env
+version: 1.0
+
+observation_space:
+  email_text: string
+  step_count: integer
+
+action_space:
+  category: string
+  action_type: string
+  response: string
+
+reward:
+  type: float
+  range: [-1, 1]
+
+tasks:
+  - easy
+  - medium
+  - hard
+command: 
+    python "Email Trigger response/baseline/run_agent.py"
